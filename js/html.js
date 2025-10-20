@@ -31,3 +31,5 @@ console.log("Ingresaste: ", entradaInput);
 
 //Simil f-strings para interpolar variables
 alert(`Ingresaste: ${entradaInput} - Bienvenido!`);
+
+//prueba
