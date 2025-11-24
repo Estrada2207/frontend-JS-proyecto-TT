@@ -33,3 +33,5 @@ console.log("Ingresaste: ", entradaInput);
 alert(`Ingresaste: ${entradaInput} - Bienvenido!`);
 
 //prueba 2
+
+// prueba push
