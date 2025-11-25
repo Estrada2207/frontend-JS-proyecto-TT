@@ -1,37 +1,45 @@
-// Definicion de una variable con let
-let nombre = "Elias";
+import { productos } from "./productos.js";
+import { agregarAlCarrito } from "./funcionesCarrito.js";
+import { obtenerCarrito } from "./storage.js";
+import { actualizarContador } from "./ui.js";
 
-// Modificacion de una variable que ya existe
-nombre = "jose";
+document.addEventListener("DOMContentLoaded", () => {
+    const contenedor = document.getElementById("contenedor-tarjetas");
 
+    const carrito = obtenerCarrito();
+    actualizarContador(carrito);
 
-const PI = 3.14;
+    productos.forEach((producto) => {
+        const tarjeta = document.createElement("article");
+        tarjeta.classList.add("tarjeta-producto");
 
-let numero = 12;
-let numeroString = "20";
+        const img = document.createElement("img");
+        img.src = producto.img;
+        img.alt = producto.nombre;
 
-let booleano = true;
+        const info = document.createElement("div");
+        info.classList.add("producto-info");
 
-console.log("Resultado de numero + numeroString: ", numero + numeroString);
+        const titulo = document.createElement("h3");
+        titulo.textContent = producto.nombre;
 
-console.log("Resultado de numero + parseInt(numeroString): ", numero - parseInt(numeroString)
-);
+        const precio = document.createElement("p");
+        precio.textContent = `$${producto.precio}`;
 
-console.log("Resultado de numero - numeroString: ", numero - numeroString);
+        const boton = document.createElement("button");
+        boton.classList.add("btn");
+        boton.textContent = "Agregar al carrito";
 
-/* ------------------------------------------------- */
+        boton.addEventListener("click", () => {
+            agregarAlCarrito(producto);
+        });
 
+        info.appendChild(titulo);
+        info.appendChild(precio);
+        info.appendChild(boton);
+        tarjeta.appendChild(img);
+        tarjeta.appendChild(info);
 
-let entradaInput = prompt("Ingrese su nombre: ");
-
-console.log("Ingresaste: ", entradaInput);
-
-// isNaN para comprobar que no sea un numero devuelve false
-// console.log(isNaN(entradaInput));
-
-//Simil f-strings para interpolar variables
-alert(`Ingresaste: ${entradaInput} - Bienvenido!`);
-
-//prueba 2
-
-// prueba push
+        contenedor.appendChild(tarjeta);
+    });
+});
