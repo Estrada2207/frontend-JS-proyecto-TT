@@ -352,17 +352,16 @@ footer {
     }
 }
 
-/* ESPACIO ENTRE PRODUCTOS EN EL CARRITO */
 #contenedor-carrito {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 80px;        /* ← espacio grande y hermoso entre cada producto */
+    gap: 80px;        
     margin: 50px 0;
     padding: 0 20px;
 }
 
-/* ESPACIO DENTRO DE CADA TARJETA (entre imagen y texto) */
+
 .tarjeta-producto {
     display: flex;
     flex-direction: row;
@@ -381,17 +380,16 @@ footer {
 }
 
 .producto-info {
-    padding: 30px;   /* ← espacio generoso dentro de la tarjeta (entre imagen y texto) */
+    padding: 30px;   
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
 }
 
-/* En móvil: tarjetas en columna y más espacio */
 @media (max-width: 768px) {
     #contenedor-carrito {
-        gap: 60px;   /* un poco menos en móvil, pero sigue quedando lindo */
+        gap: 60px;   
     }
     
     .tarjeta-producto {
