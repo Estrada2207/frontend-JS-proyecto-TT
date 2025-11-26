@@ -17,9 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
         img.src = producto.img;
         img.alt = producto.nombre;
 
-        const info = document.createElement("div");
-        info.classList.add("producto-info");
-
         const titulo = document.createElement("h3");
         titulo.textContent = producto.nombre;
 
@@ -34,12 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
             agregarAlCarrito(producto);
         });
 
-        info.appendChild(titulo);
-        info.appendChild(precio);
-        info.appendChild(boton);
-        tarjeta.appendChild(img);
-        tarjeta.appendChild(info);
-
+        tarjeta.appendChild(img)
+        tarjeta.appendChild(titulo)
+        tarjeta.appendChild(precio)
+        tarjeta.appendChild(boton)
+        
         contenedor.appendChild(tarjeta);
     });
 });

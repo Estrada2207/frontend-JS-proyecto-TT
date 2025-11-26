@@ -57,7 +57,8 @@ const renderizarCarrito = () => {
     botonVaciar.classList.add("btn");
     botonVaciar.classList.add("btn-vaciar-carrito");
     botonVaciar.textContent = "Vaciar carrito";
-    botonVaciar.addEventListener("cliack", () => {
+    botonVaciar.addEventListener("click", () => {
+        vaciarCarrito();
         renderizarCarrito();
     });
 
