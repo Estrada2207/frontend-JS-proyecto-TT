@@ -94,13 +94,13 @@ main {
 #contenedor-tarjetas {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 0px;
     justify-content: center;
 }
 
-.tarjeta-producto {
+.contenedor-tarjetas {
     background: white;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: visible;
     flex: 1 1 250px;
@@ -116,7 +116,7 @@ main {
     border-radius: 10px 0 0 10px; 
 }
 
-.producto-info {
+.tarjeta-producto {
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -124,12 +124,12 @@ main {
     width: 50%;
 }
 
-.producto-info h3 {
+.tarjeta-producto {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-.producto-info p {
+.tarjeta-producto {
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
@@ -349,5 +349,62 @@ footer {
 
     #contacto {
         padding: 10px;
+    }
+}
+
+/* ESPACIO ENTRE PRODUCTOS EN EL CARRITO */
+#contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;        /* ← espacio grande y hermoso entre cada producto */
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+/* ESPACIO DENTRO DE CADA TARJETA (entre imagen y texto) */
+.tarjeta-producto {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 700px;
+    width: 100%;
+}
+
+.tarjeta-producto img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.producto-info {
+    padding: 30px;   /* ← espacio generoso dentro de la tarjeta (entre imagen y texto) */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+/* En móvil: tarjetas en columna y más espacio */
+@media (max-width: 768px) {
+    #contenedor-carrito {
+        gap: 60px;   /* un poco menos en móvil, pero sigue quedando lindo */
+    }
+    
+    .tarjeta-producto {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tarjeta-producto img {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .producto-info {
+        padding: 25px;
     }
 }

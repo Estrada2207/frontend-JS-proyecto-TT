@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrito</title>
-    <link rel="stylesheet" href="../css/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - MotoVida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header class="header">
-        <p class="header_logo">
-            <a href="../index.html">MotoVida</a>
-        </p>
-        <nav class="header_nav">
-            <ul>
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contactanos</a>
-                </li>
-                <li>
-                    <a href="./carrito.html" class="carrito-icono">
-                       🛒 <span id="contador-carrito"> 0</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Carrito de compras</h1>
-        <section id="contenedor-carrito">
-        </section>
-        <div class="acciones-carrito" id="acciones-carrito">
-        </div>
-    </main>
-    <footer class="footer">
-        <p>MotoVida es tu destino confiable para todo lo relacionado con el mundo de las motos. Con pasión por las dos ruedas, ofrecemos una experiencia integral para los amantes de las motocicletas.</p>
-        <p>&copy; 2025 MI E-Commerce</p>
-        <nav>
-            <ul>
-                <li>Instagram</li>
-                <li>TikTok</li>
-                <li>X</li>
-            </ul>
-        </nav>
-    </footer>
-    <script type="module" src="./js/carrito.js"></script>
+    <div class="grid-container">
+        <header>
+            <div class="header-top">
+                <a href="../img/logo.png" class="logo">
+                    <img src="../img/logo.png" alt="MotoVida Logo">
+                </a>
+                <audio controls autoplay volume="0.3" src="../multimedia/Tropical Resort (Act 3) - Sonic Colors [OST].mp4">
+                    Tu navegador no soporta la reproducción de audio
+                </audio>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./contacto.html">Contáctanos</a></li>
+                    <li class="carrito-link">
+                        🛒 Carrito (<span id="contador-carrito">0</span>)
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="carrito-main">
+            <h1 class="titulo-carrito">Tu Carrito</h1>
+
+            <section id="contenedor-carrito"></section>
+
+            <div class="acciones-carrito" id="acciones-carrito"></div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 MotoVida. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#"><img src="../img/icons8-facebook-48.png" alt="Facebook"></a>
+                <a href="#"><img src="../img/icons8-tiktok-48.png" alt="TikTok"></a>
+                <a href="#"><img src="../img/icons8-whatsapp-48.png" alt="WhatsApp"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="../js/carrito.js"></script>
+    <script type="module" src="../js/ui.js"></script>
 </body>
 </html>
