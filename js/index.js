@@ -1,7 +1,7 @@
-import { productos } from "./productos.js";
-import { agregarAlCarrito } from "./funcionesCarrito.js";
-import { obtenerCarrito } from "./storage.js";
-import { actualizarContador } from "./ui.js";
+import { productos } from "/productos.js";
+import { agregarAlCarrito } from "/funcionesCarrito.js";
+import { obtenerCarrito } from "/storage.js";
+import { actualizarContador } from "/ui.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const contenedor = document.getElementById("contenedor-tarjetas");
